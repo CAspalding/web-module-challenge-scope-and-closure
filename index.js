@@ -38,7 +38,7 @@ function processFirstItem(stringList, callback) {
 function counterMaker() {
   let count = 0;
   return function counter() {
-   return count++;
+    return count++;
   }
 }
 
@@ -56,11 +56,11 @@ function counter2() {
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(){
+function inning() {
 
-   return Math.floor(Math.random() * 3)
+  return Math.floor(Math.random() * 3)
 
-}
+};
 
 /* Task 3: finalScore()
 
@@ -74,13 +74,25 @@ finalScore(inning, 9) might return:
   "Away": 5,
 }
 
-*/ 
+*/
 
-function finalScore(/*code Here*/){
+function finalScore(inning, innings) {
+  var score = {
+    Home: 0,
+    Away: 0,
+  };
 
-  /*Code Here*/
+  for (var i = 0; i < innings; i++) {
+    score.Home = score.Home + inning()
+    score.Away = score.Away + inning()
+};
+console.log(score.Home)
+console.log(score.Away)
 
-}
+};
+
+finalScore(inning, 9)
+
 
 /* Task 4: 
 
