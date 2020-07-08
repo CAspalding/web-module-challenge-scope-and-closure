@@ -27,11 +27,11 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ * Counter 1 has all of the code within the function, meaning it has function level scope. 
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ * Counter 2 because it has to reach outward to grab the count variable.
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ * Counter one is preferable if do not want the count variable accessable in the global scope. This would be useful if you needed the count to always reset to 0. The second one is more useful if you are making something like a timer that you need to add and subtract time from. 
 */
 
 // counter1 code
@@ -56,9 +56,9 @@ function counter2() {
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(){
 
-    /*Code Here*/
+   return Math.floor(Math.random() * 3)
 
 }
 
